@@ -1,0 +1,31 @@
+#body{
+    background-color: bisque;
+    padding: 30px;
+    border-radius: 20px;background-color: rgb(229, 216, 231);
+}
+#signUp:hover{
+cursor: pointer;
+transition: all 0.9s;
+font-size: 40px;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+color: blueviolet;
+}
+
+
+
+.bod1{
+background-color: rgb(10, 9, 9);
+}
+
+/* //media has star// */
+@media screen and (max-width: 390px) {
+    #signUp {
+    position: relative;
+    left: -433px;
+    width: 100%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  } #body{
+position: relative;
+top: -30px;
+  }
+}
