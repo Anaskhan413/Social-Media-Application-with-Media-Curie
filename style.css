@@ -1,3 +1,8 @@
+*{
+padding: 0;
+margin: 0;
+}
+
 #body{
     background-color: bisque;
     padding: 30px;
@@ -12,20 +17,78 @@ color: blueviolet;
 }
 
 
+#formm{
+
+margin-left: 70px;
+padding: 6px;
+/* border-color: rgb(202, 189, 218);
+border-radius: 10px; */
+}
+.para1{
+/* border: 3PX solid red; */
+margin-left: 10PX;
+margin-top: 10PX;
+}
+
+
 
 .bod1{
-background-color: rgb(10, 9, 9);
+/* background-color: rgb(10, 9, 9); */
+width: 100%;
 }
 
 /* //media has star// */
 @media screen and (max-width: 390px) {
     #signUp {
-    position: relative;
-    left: -433px;
-    width: 100%;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  } #body{
+      
+position: absolute;
+left: -349px;
+top: -19px;
+    /* width: 100%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+    font-size:6px;
+  }
+  
+  
+  #body{
 position: relative;
 top: -30px;
+border: 9px solid red;
+padding: 90px;
   }
+
+  
+
+.bod1{
+  width: 100%;
+  }
+
+
+  #formm{
+    /* border: 3px solid rgb(243, 235, 235); */
+    margin-left: -10px;
+    }
 }
+
+
+
+
+#backsign{
+background-image: url(./images/h4.png);
+background-repeat:no-repeat;
+
+
+}
+
+#signback{
+background-image: url(./images/h1.png);
+background-repeat: no-repeat;
+}
+
+#allbox{
+background-color: rgb(27, 25, 25);
+border: 3px solid red;
+
+}
+
+

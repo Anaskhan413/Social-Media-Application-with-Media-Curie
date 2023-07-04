@@ -1,8 +1,13 @@
-// window.addEventListener("load", function() {
-//     if (localStorage.getItem("loginUser")) {
-//         window.location.replace("./dashboard.html");
-//     }
-// });
+window.addEventListener("load", function () {
+    console.log(localStorage.getItem("UserLogin"))
+    var chckUser = localStorage.getItem("UserLogin")
+    if (chckUser) {
+        window.location.replace("./dashboard.html")
+    }
+
+})
+
+
 
 function userSignup() {
     var fullName = document.querySelector("#fName").value;
@@ -17,7 +22,7 @@ function userSignup() {
         password: password
     };
 
-    var getUserData = JSON.parse(localStorage.getItem("users")) || [];
+    var getUserData = JSON.parse(localStorage.getItem("USERDATA")) || [];
     var findingUser = getUserData.find(function (value) {
         return value.email === email;
     });
@@ -26,7 +31,7 @@ function userSignup() {
         alert("Email address already exists");
     } else {
         getUserData.push(userObj);
-        localStorage.setItem("users", JSON.stringify(getUserData));
+        localStorage.setItem("USERDATA", JSON.stringify(getUserData));
         alert("User signed up");
         window.location.href = "./index.html";
     }

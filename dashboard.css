@@ -1,48 +1,76 @@
 #header{
    
-   margin-top: 10px; 
-/* border: 4px solid red; */
-border:1px solid rgb(207, 207, 195);
-padding: 20px;
-background-color: rgb(255, 255, 255);
+   margin-top: 1px; 
+padding: 1px;
+background-color: black;
+border-radius: 10px;
+
+
 
 }
 
 #idtextlink{
    /* border: 3px solid blue; */
-   width:300px; 
+   width:0px; 
    margin-top: -9px;
    font-size: 38px;
    margin-right: 170px;
    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-#textsecondlink{
-/* border: 5px solid red; */
-}
+
 #sidelinks{
 display: flex;
+/* border: 4px solid red; */
+padding-top: 10PX;
+ 
 }
 .postbox{
-background-color: rgb(177, 151, 255);
+/* background-color: rgb(177, 151, 255); */
 height: 360px;
 padding-top: 30px;
-border: px solid rgb(249, 247, 255);
+border: 4px solid rgb(255, 251, 251);
 border-radius: 16px;
 
 }
 
 .lightbluee{
-   border: 14px solid rgb(255, 250, 250);
-   background-color: rgb(0, 0, 0);
+   /* border: 4px solid rgb(255, 0, 0); */
    height: 500px;
+   /* background-image: url(./images/h5.png);
+   background-repeat: no-repeat; */
+   margin-top: 80PX;
 }
 
-#listParent{
-   background-color: rgb(0, 0, 0);
+#allList{
+   background-color: rgb(255, 253, 253);
 margin-top: 90px;
 padding-left: 400px;
 padding-top: 40px;
+ background-image: url(./images/blu\ \(1\).jpg);
+background-repeat: no-repeat;
 
+}
+
+#fulName{
+margin-left: -600px;
+margin-top: 60px;
+}
+
+.alldatadaashbaord{
+border: 3px solid rgb(8, 0, 0);
+background-color: rgb(14, 14, 15);
+height: 750px;
+background-image: url(./images/blue\ 200.jpg);
+}
+
+
+
+#footer{
+width: 240px;
+position: relative;
+top: -650px;
+left: 1090px;
+/* border: 3px solid red; */
 }
 
 
@@ -63,24 +91,55 @@ padding-top: 40px;
 
    #idtextlink{
       /* border: 3px solid rgb(71, 252, 22); */
-       width:130px; 
-       margin-top: 10px;
-width: 50%;
-padding: 10px;
-       margin-left: 100px;
-   }
 
-#listParent{
-   background-color: rgb(247, 247, 255);
-  border: 3px solid red;
-  padding-left: 13px;
-  border: 8px solid rgb(231, 219, 219);
-  background-color: rgb(0, 0, 0);
-  width: 330px;
+width: 680px;
+/* padding: 10px;
+padding-left: 60px;
+       margin-left: 22px;
+       margin-top: -80px;
+       font-size: 18px; */
+       /* border: 3px solid rgb(255, 0, 0); */
+       position: relative;
+       top: -40px;
+       left: 116px;
+       /* border: 3px solid rgb(255, 0, 0); */
+       font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
 
+   }#imageS{
+/* border: 3px solid red; */
+position: relative;
+top: 40px;
+left: -30px;
+width: 60px;
 }
+
+
    
+#allList{
+border: 3px solid rgb(0, 0, 0);
+
+padding: 30px;
+padding-right: 80px;
+}
+#sidelinks{
+   display: flex;
+   /* border: 4px solid red; */
+   /* border: 3px solid red; */
+position: relative;
+top: -40px;
+left: 30px;    
+   }
+   #footer{
+      width: 260px;
+      /* position: relative;
+      top: -650px;
+      left: 1090px; */
+      /* border: 4px solid red; */
+      position: relative;
+      left: 20px;
+      top: -534px;
+      }
 
    
  }

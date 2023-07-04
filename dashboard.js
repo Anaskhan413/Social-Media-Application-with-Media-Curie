@@ -1,9 +1,49 @@
+// loading purpose and it will resist the user to go back at the previous pages until he would be loged out //
 
-var listParent = document.getElementById("listParent");
-var loginUser;
+window.addEventListener("load", function () {
+
+    var userLogin = localStorage.getItem("UserLogin")
+    if (!userLogin) {
+        window.location.replace("./index.html")
+        return
+    }
+
+    var getUser = JSON.parse(localStorage.getItem("UserLogin"))
+    login = getUser
+    var usrFullName = this.document.getElementById("fulName")
+    console.log(usrFullName)
+    if (fulName) {
+        fulName.innerHTML = "WELCOME" + " " + login.fulName
+
+    }
+
+    if (allList) {
+        var getPosts = JSON.parse(localStorage.getItem("posts")) || []
+
+        for (var value of getPosts) {
+            allList.innerHTML += `<div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">${value.title}</h5>
+                <p class="card-text">${value.desc}</p>
+                <button class="btn btn-info" onclick="editPost(${value.id} , this)" >EDIT</button>
+                <button class="btn btn-danger" onclick="deletePost(${value.id} , this)" >DELETE</button>
+            </div>
+        </div>`
+        }
+
+    }
+
+})
+
+
+// TWO VARIABLES//
+
+var allList = document.getElementById("allList")
+var login;
 
 
 
+// MAIN WORK STARTED//
 
 function addPost() {
     console.log("addPost");
@@ -25,15 +65,17 @@ function addPost() {
         id = 1;
     }
 
-    var todoBox = `<div class="card" style="width: 18rem;">
-    <div class="card-body">
-        <h5 class="card-title">${title.value}</h5>
-        <p class="card-text">${description.value}</p>
+    var postBox = `<div class="card" style=" width:230px;">
+    <div class="card-body" style="background-color:black;">
+        <h5 class="card-title"style="font-size: 38px;
+       color: white; ">${title.value}</h5>
+        <p class="card-text"style="font-size: 38px;
+        color: white; ">${description.value}</p>
         <button style="background-color: blue;margin-top: 19px; padding :25px;color:white; border-radius:10px;" onclick="edit(${id}, this)">EDIT</button>
         <button  style="background-color: rgb(226, 64, 43);margin-top: 19px; padding :25px; border-radius:10px;color:white;" onclick="delPost(${id}, this)">DELETE</button>
     </div>
 </div>`;
-    listParent.innerHTML = todoBox + listParent.innerHTML;
+allList.innerHTML = postBox + allList.innerHTML;
 
     var postObj = {
         id: id,
@@ -49,6 +91,7 @@ function addPost() {
 }
 
 
+//DELETER  WORK STARTED//
 
 function delPost(id, e) {
     var getPosts = JSON.parse(localStorage.getItem("posts"));
@@ -63,7 +106,7 @@ function delPost(id, e) {
 }
 
 
-
+//EDIT  WORK STARTED//
 function edit(id, e) {
     var getPosts = JSON.parse(localStorage.getItem("posts"));
     var indexNum;
@@ -85,13 +128,13 @@ function edit(id, e) {
     getPosts.splice(indexNum, 1, editObj);
     localStorage.setItem("posts", JSON.stringify(getPosts));
 
-    var h5Title = e.parentNode.firstElementChild;
-    var pDesc = e.parentNode.firstElementChild.nextElementSibling;
-    h5Title.innerHTML = editTitle;
-    pDesc.innerHTML = editDesc;
+    var h5detail = e.parentNode.firstElementChild;
+    var paraDesc = e.parentNode.firstElementChild.nextElementSibling;
+    h5detail.innerHTML = editTitle;
+    paraDesc.innerHTML = editDesc;
 }
-
+//LOGOUT  WORK STARTED//
 function logout() {
-    localStorage.removeItem("loginUser")
+    localStorage.removeItem("UserLogin")
     window.location.replace("./index.html")
 }
